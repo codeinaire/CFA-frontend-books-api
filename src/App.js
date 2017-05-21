@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
-// import BookForm from './BookForm';
+import BookForm from './BookForm';
 import BookList from './BookList';
 
 class App extends Component {
@@ -41,9 +41,9 @@ class App extends Component {
     return (
       <div>
         <h1>Books Front End</h1>
-        <BookList books={this.state.books} />
-        {/* <BookForm getBookList={() => this.getBookList()}/>
-        {this.state.books.length <  1 ? <p>Loading...</p> : <BookList books={this.state.books} /> } */}
+        {/* <BookList books={this.state.books} /> */}
+        <BookForm getBookList={() => this.getBookList()}/>
+        {this.state.books.length <  1 ? <p>Loading...</p> : <BookList books={this.state.books} /> }
       </div>
     );
   }
